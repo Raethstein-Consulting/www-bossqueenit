@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 6rem; /* Add extra space at the bottom of the page */
+  padding-bottom: 3rem; /* Add extra space at the bottom of the page */
 }
 
 /*Setting up grid view for responsiveness*/
@@ -110,10 +110,14 @@ h2 {
   height: 5rem;
   width: auto;
   position:absolute;
-  left: 1.5rem;
+  left: 1px;
   margin-top: 0.8rem;
 }
 /* End navbar */
+
+.image-container {
+  border: 0;
+}
 
 .welcome {
   height: 95vh;
@@ -127,7 +131,6 @@ h2 {
   border-bottom: 1px solid white;
   width: 25rem;
   margin: 0.2rem auto;
-  
 }
 
 .welcome>h1 {
@@ -138,6 +141,11 @@ h2 {
 .welcome>p {
   color: white;
   font-size: 1.5rem;
+}
+
+.logo2 {
+  height: 0;
+  width: 0;
 }
 
 .about {
@@ -257,8 +265,22 @@ ul {
   max-width: 100rem;
   height: auto;
   aspect-ratio: 3/2;
-  border-radius: 0.5rem;
-  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid black;
+  object-fit:fill;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.project-img-2 {
+  width: 70%;
+  max-width: 30rem;
+  height: auto;
+  aspect-ratio: 2.5/3;
+  border-radius: 1rem;
+  border: 1px solid black;
+  object-fit:fill;
   margin: 1rem auto;
   display: flex;
   justify-content: center;
@@ -269,6 +291,7 @@ ul {
   height: 4.5vh;
   font-size: 1.4rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -279,7 +302,6 @@ ul {
 .contact {
   text-align: center;
   margin-top: 3rem;
-  margin-bottom: 2rem; /* Reduce or remove large bottom margin */
 }
 
 .contact-me {
@@ -291,7 +313,7 @@ ul {
 }
 
 .reviews-socials {
-  margin-bottom: 10rem; /* Was 33vh, use a smaller value for better layout */
+  margin-bottom: 1rem;
 }
 
 .testimonials {
@@ -341,6 +363,10 @@ address {
     width: 100%;
     height: auto;
   }
+  .topnav a {
+  padding: 0.9rem 0.5rem;
+  font-size: 0.9rem;
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -355,6 +381,14 @@ address {
     height: 0;
     width: 0;
   }
+  .logo2 {
+    position: absolute;
+    height: 4.5rem;
+    width: auto;
+    top: 3.25rem;
+    left: 1rem;
+    z-index: 5;
+  }
   .about {
     padding: 2rem 2rem;
   }
@@ -367,6 +401,7 @@ address {
   body {
     font-size: 2rem;
   }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -374,12 +409,18 @@ address {
   html {
     font-size: 100% !important;
   }
-  
   body {
     font-size: 1.4rem;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  
+  .topnav a {
+  font-size: 1.45rem;
+  }
+
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {
@@ -416,7 +457,7 @@ main, .content, #contact, .reviews-socials {
   background: none;
 }
 #welcome-section {
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin: 0;
   background: none;
